@@ -4,9 +4,9 @@ import com.android.volley.Response;
 
 
 /**
- * Author:  Áºîñ³Ç
+ * Author:  æ¢é“–åŸ
  * Email:   1038127753@qq.com
- * Date:    2015Äê11ÔÂ8ÈÕ22:34:48
+ * Date:    2015å¹´11æœˆ8æ—¥22:34:48
  * Description:
  */
 public class GsonDecode<T> {

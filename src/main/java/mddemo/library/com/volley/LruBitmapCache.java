@@ -8,10 +8,10 @@ import android.util.DisplayMetrics;
 import com.android.volley.toolbox.ImageLoader;
 
 /**
- * Author:  Áºîñ³Ç
+ * Author:  æ¢é“–åŸ
  * Email:   1038127753@qq.com
- * Date:    2015Äê11ÔÂ8ÈÕ22:33:32
- * Description:VolleyµÄ2L»º´æ
+ * Date:    2015å¹´11æœˆ8æ—¥22:33:32
+ * Description:Volleyçš„2Lç¼“å­˜
  */
 public class LruBitmapCache extends LruCache<String, Bitmap> implements ImageLoader.ImageCache {
     private LruBitmapCache(int maxSize) {

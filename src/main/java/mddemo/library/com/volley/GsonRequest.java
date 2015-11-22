@@ -10,10 +10,10 @@ import com.google.gson.Gson;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Author:  Áºîñ³Ç
+ * Author:  æ¢é“–åŸ
  * Email:   1038127753@qq.com
- * Date:    2015Äê11ÔÂ8ÈÕ22:34:53
- * Description:volleyÇëÇóµÄ·â×°
+ * Date:    2015å¹´11æœˆ8æ—¥22:34:53
+ * Description:volleyè¯·æ±‚çš„å°è£…
  */
 public class GsonRequest<T> extends Request<T> {
     private final Response.Listener<T> mListener;
@@ -21,12 +21,12 @@ public class GsonRequest<T> extends Request<T> {
     private Class<T> mClass;
 
     /**
-     * GsonRequestµÄ¹¹Ôìº¯Êı
-     * @param method ÇëÇóµÄ·½Ê½
-     * @param url    ÇëÇóµÄurlµØÖ·
-     * @param clazz  ´«Èë½øÀ´µÄÀàĞÍ[ÔİÊ±É¾³ı]
-     * @param listener ¼àÌıÆ÷
-     * @param errorListener ´íÎóµÄ¼àÌı
+     * GsonRequestçš„æ„é€ å‡½æ•°
+     * @param method è¯·æ±‚çš„æ–¹å¼
+     * @param url    è¯·æ±‚çš„urlåœ°å€
+     * @param clazz  ä¼ å…¥è¿›æ¥çš„ç±»å‹[æš‚æ—¶åˆ é™¤]
+     * @param listener ç›‘å¬å™¨
+     * @param errorListener é”™è¯¯çš„ç›‘å¬
      */
     public GsonRequest(int method, String url,Class<T> clazz,  Response.Listener<T> listener,
                        Response.ErrorListener errorListener) {
@@ -36,18 +36,18 @@ public class GsonRequest<T> extends Request<T> {
         mListener = listener;
     }
     /**
-     *¹¹Ôìº¯Êı
-     * @param url    ÇëÇóµÄurlµØÖ·
-     * @param clazz  ´«Èë½øÀ´µÄÀàĞÍ[ÔİÊ±É¾³ı]
-     * @param listener ¼àÌıÆ÷
-     * @param errorListener ´íÎóµÄ¼àÌı
+     *æ„é€ å‡½æ•°
+     * @param url    è¯·æ±‚çš„urlåœ°å€
+     * @param clazz  ä¼ å…¥è¿›æ¥çš„ç±»å‹[æš‚æ—¶åˆ é™¤]
+     * @param listener ç›‘å¬å™¨
+     * @param errorListener é”™è¯¯çš„ç›‘å¬
      */
     public GsonRequest(String url, Class<T> clazz, Response.Listener<T> listener,
                        Response.ErrorListener errorListener) {
         this(Method.GET, url, clazz, listener, errorListener);
     }
     /**
-     * ÔÚÕâÀïÎÒÏÈÔİÊ±µÄĞ´ËÀ³É¾ßÌåµÄÊı¾İÀà£¬µ½Ê±ºò¿´¿´ÔõÃ´ĞŞ¸ÄÕâ¿é
+     * åœ¨è¿™é‡Œæˆ‘å…ˆæš‚æ—¶çš„å†™æ­»æˆå…·ä½“çš„æ•°æ®ç±»ï¼Œåˆ°æ—¶å€™çœ‹çœ‹æ€ä¹ˆä¿®æ”¹è¿™å—
      * @param response volleyresponse
      * @return  json  by  gson to list<Objetc>
      */
@@ -56,16 +56,16 @@ public class GsonRequest<T> extends Request<T> {
         try {
             String jsonString = new String(response.data,
                     HttpHeaderParser.parseCharset(response.headers));
-            //´Ë´¦¶ÔÊı¾İÊÇ·ñÎª¿Õ×öÅĞ¶Ï
-            return Response.success(VolleyGson.getBean(jsonString,mClass),
+            //æ­¤å¤„å¯¹æ•°æ®æ˜¯å¦ä¸ºç©ºåšåˆ¤æ–­
+            return Response.success(VolleyGson.getBean(jsonString, mClass),
                     HttpHeaderParser.parseCacheHeaders(response));
         } catch (UnsupportedEncodingException e) {
             return Response.error(new ParseError(e));
         }
     }
     /**
-     * ´¦Àí´íÎó
-     * @param response ÏìÓ¦Á÷
+     * å¤„ç†é”™è¯¯
+     * @param response å“åº”æµ
      */
     @Override
     protected void deliverResponse(T response) {

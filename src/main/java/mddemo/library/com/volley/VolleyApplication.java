@@ -7,10 +7,10 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
 /**
- * Author:  Áºîñ³Ç
+ * Author:  æ¢é“–åŸ
  * Email:   1038127753@qq.com
- * Date:    2015Äê11ÔÂ8ÈÕ22:32:21
- * Description: ³ÌĞòµÄapplication
+ * Date:    2015å¹´11æœˆ8æ—¥22:32:21
+ * Description: ç¨‹åºçš„application
  */
 
 public class VolleyApplication extends Application {
@@ -33,15 +33,15 @@ public class VolleyApplication extends Application {
     }
 
     /**
-     * ·µ»ØÒ»¸öµ¥ÀıµÄNetApplication
-     * @return ·µ»ØÒ»¸öµ¥ÀıµÄNetApplication
+     * è¿”å›ä¸€ä¸ªå•ä¾‹çš„NetApplication
+     * @return è¿”å›ä¸€ä¸ªå•ä¾‹çš„NetApplication
      */
     public static VolleyApplication getInstance() {
         return mInstance;
     }
 
     /**
-     * ·µ»ØÒ»¸övolleyµÄÇëÇóÎªÁË´´½¨Ò»¸öÍøÂçµÄÇëÇó
+     * è¿”å›ä¸€ä¸ªvolleyçš„è¯·æ±‚ä¸ºäº†åˆ›å»ºä¸€ä¸ªç½‘ç»œçš„è¯·æ±‚
      * @return {@link RequestQueue}
      */
     public RequestQueue getVolleyRequestQueue() {
@@ -61,7 +61,7 @@ public class VolleyApplication extends Application {
     }
 
     /**
-     * ÍË³öËùÓĞµÄÏûÏ¢¶ÓÁĞ
+     * é€€å‡ºæ‰€æœ‰çš„æ¶ˆæ¯é˜Ÿåˆ—
      * @param tag associated with the Volley requests to be cancelled
      */
     public static void cancelAllRequests(String tag) {
@@ -81,7 +81,7 @@ public class VolleyApplication extends Application {
         return mImageLoader;
     }
 
-    //´´½¨Ò»¸öÍ¼Æ¬µÄ»º´æ
+    //åˆ›å»ºä¸€ä¸ªå›¾ç‰‡çš„ç¼“å­˜
     private LruBitmapCache getVolleyImageCache() {
         if (mLruBitmapCache == null) {
             mLruBitmapCache = new LruBitmapCache(mInstance);

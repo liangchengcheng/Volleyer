@@ -8,10 +8,10 @@ import com.android.volley.VolleyError;
 
 
 /**
- * Author:  Áºîñ³Ç
+ * Author:  æ¢é“–åŸ
  * Email:   1038127753@qq.com
- * Date:    2015Äê11ÔÂ8ÈÕ22:26:49
- * Description:VolleyµÄÊı¾İ
+ * Date:    2015å¹´11æœˆ8æ—¥22:26:49
+ * Description:Volleyçš„æ•°æ®
  */
 public class VolleyManager<T> {
 
@@ -26,7 +26,7 @@ public class VolleyManager<T> {
 
         VolleyResponseCallback callback;
         successListener(VolleyResponseCallback callback){
-           this.callback=callback;
+            this.callback=callback;
         }
         @Override
         public void onResponse(T response) {
